@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="text-center py-4">
+        <h1>My Gallery</h1>
+        <p id="greeting"></p> <!-- Elemen untuk greeting -->
+        <nav class="coquette-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">Profile</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="gallery-page container">
+        <section class="mt-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="project1.PNG" alt="Project 1" class="img-fluid">
+                    <p>This project is an interactive learning platform designed to introduce various musical instruments in a visually appealing and engaging way. 
+                    Featuring a colorful interface, illustrations of musical instruments, and simple navigation buttons, users especially children can learn in a fun and 
+                    interactive manner. The project aims to simplify the understanding of musical instruments while fostering interest in the world of music.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="project2.PNG" alt="Project 2" class="img-fluid">
+                    <p>Sneakers.IDN is a simple platform to find the best sneakers at the best prices. Featuring a minimalist design in purple, 
+                    the website offers navigation to Profile, Products, and Suggestions pages, complemented by the catchy slogan "Grab It Fast!" Perfect for sneaker enthusiasts.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="project3.PNG" alt="Project 3" class="img-fluid">
+                    <p>This project is an interactive learning platform titled "Getting to Know Animals," designed for children. Featuring nature-themed visuals and simple navigation buttons, 
+                    this platform helps children learn about various animals in a fun and educational way.</p>
+                </div>
+            </div>
+            <div class="button-container">
+                <!-- Tombol Submit -->
+                <a href="about.html" class="button-div">Back</a>
+                <!-- Tombol Kembali -->
+                <a href="contact.html" class="button-div">Next</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-3">
+        <p>Niansa Sixty Avilla PMM2401055 Project UAS Desain Web</p>
+    </footer>
+
+    <script>
+        // Ambil waktu saat ini
+        const date = new Date();
+        const hours = date.getHours();
+    
+        // Greeting berdasarkan jam
+        const greeting = hours < 12
+        ? "Good Morning🌤️"
+        : hours < 15
+        ? "Good Afternoon☀️"
+        : hours < 18
+        ? "Good Evening🌥️"
+        : "Good Night🌙";
+
+        const header = document.querySelector("header");
+        const greetingElement = document.createElement("p");
+        greetingElement.id = "blinking-greeting";
+        greetingElement.textContent = greeting;
+        const titleElement = header.querySelector("h1");
+        titleElement.insertAdjacentElement("afterend", greetingElement);
+    </script>
+</body>
+</html>
